@@ -1,0 +1,74 @@
+.content {
+    width: 300px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    transition: all 0.2s ease-in-out;
+    margin: 30px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content .actions button {
+    padding: 7px;
+    color: white;
+    font-weight: medium;
+    border: none;
+    border-radius: 4px;
+}
+
+.content .actions button:hover {
+    cursor: pointer;
+}
+
+.info {
+    background-color: #3498db;
+}
+
+.success {
+    background-color: #2ecc71;
+}
+
+.warning {
+    background-color: #f1c40f;
+}
+
+.error {
+    background-color: #e74c3c;
+}
+
+.toast-container-new {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.toast-show {
+    width: 280px;
+    border: 2px solid black;
+    height: 50px;
+    padding-inline: 7px;
+    top: 25px;
+    right: 20px;
+    position: fixed;
+}
+
+.progress-bar {
+    width: 0;
+    background-color: red;
+    height: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-top: 8px;
+}

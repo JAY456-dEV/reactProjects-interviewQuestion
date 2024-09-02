@@ -1,0 +1,21 @@
+.main-traffic-bg {
+    width: 70px;
+    height: 220px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    /* flex-direction: column-reverse; */
+}
+
+.main-light-round {
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    border-radius: 50%;
+}

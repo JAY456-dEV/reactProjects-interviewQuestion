@@ -1,0 +1,11 @@
+.progress-main {
+    width: 350px;
+    height: 30px;
+    background-color: rgb(39, 30, 30);
+}
+
+.progress-practice {
+    width: 10%;
+    height: inherit;
+    background-color: blue;
+}

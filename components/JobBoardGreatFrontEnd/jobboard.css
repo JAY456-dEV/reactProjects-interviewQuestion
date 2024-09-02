@@ -1,0 +1,22 @@
+.jobBox {
+    width: 600px;
+    height: 140px;
+    background-color: wheat;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+
+    & a{ 
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: black;
+        line-height: 1;
+    }
+
+}
+
+.jobBy{
+    display: flex;
+    gap: 10px;
+}

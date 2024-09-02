@@ -1,0 +1,23 @@
+.data-paginate {
+    margin-top: 20px;
+}
+
+.paginate {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 40px;
+    text-align: center;
+}
+
+.main-paginate {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & li {
+        list-style: none;
+        cursor: pointer;
+    }
+}

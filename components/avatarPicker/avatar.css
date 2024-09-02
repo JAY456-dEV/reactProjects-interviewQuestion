@@ -1,0 +1,65 @@
+.container {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 5px solid transparent;
+    transition: border-color 0.4s ease-in-out;
+}
+
+.avatar-main {
+    text-align: center;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.avatar-main img:hover {
+    border-color: rgb(118, 118, 190);
+}
+
+.avatar-lists {
+    width: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 20px;
+    background-color: rgb(14, 14, 21);
+    border-radius: 7px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.avatarActive img {
+    border: 5px solid rgb(118, 118, 190);
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid blue;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    animation: spin 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}

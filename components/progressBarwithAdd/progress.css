@@ -1,0 +1,29 @@
+button {
+    padding: 5px 15px;
+    background: #2c3e50;
+    color: white;
+    border: 0;
+    margin: 20px;
+}
+
+.progress-bars {
+    width: 360px;
+    border: 2px solid black;
+    height: 15px;
+    margin: 20px;
+    margin-top: 0;
+    position: relative;
+}
+
+.progress {
+    width: 0;
+    background-color: rgb(15, 57, 57);
+    height: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ADDbtn {
+    background-color: black;
+}

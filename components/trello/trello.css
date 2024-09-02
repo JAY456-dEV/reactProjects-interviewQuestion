@@ -1,0 +1,27 @@
+.cate-main {
+    display: flex;
+    max-width: 600px;
+    justify-content: space-between;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.cate-partic {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 300px;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.catePrint {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid black;
+    margin-bottom: 15px;
+    padding-inline: 10px;
+}

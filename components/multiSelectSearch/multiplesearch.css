@@ -1,0 +1,90 @@
+.app-main-multi {
+    max-width: 380px;
+    height: auto;
+}
+
+.search-main {
+    margin-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 7px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    width: 350px;
+    height: 30px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    width: 200px;
+    /* position: relative; */
+}
+
+.filterData {
+    margin-top: 20px;
+    width: 200px;
+    height: 250px;
+    overflow-y: auto;
+    background-color: white;
+    /* padding: 10px; */
+    /* position: absolute; */
+}
+
+.filterData::-webkit-scrollbar {
+    width: 3px;
+}
+
+.filterData::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+
+.main-pos-SelectMenu {
+    position: absolute;
+}
+
+.singleData {
+    padding: 4px 4px;
+    border: 1px solid grey;
+    display: flex;
+    gap: 10px;
+
+    & p {
+        margin: 1px;
+    }
+}
+
+.singleData:hover {
+    background-color: rgb(203, 203, 203);
+    cursor: pointer;
+}
+
+.selectedData-main {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.selectedData {
+    background-color: purple;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4px 10px;
+    font-size: 14px;
+    gap: 10px;
+
+    & p {
+        margin: 0;
+    }
+
+    & i {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,56 @@
+.accordin-main {
+    width: 100%;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #faf5f5d8;
+}
+
+.accordin-flex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+    background-image: url('https://ik.imagekit.io/devtoolstech/question-images/Accordion-V2/accordion-v2-bg_xC-tJ2rig.svg?updatedAt=1682241938343');
+    gap: 15px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.ques-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 20px;
+    cursor: pointer;
+
+    & i {
+        display: flex;
+        font-size: 1rem;
+    }
+}
+
+.ans {
+    padding: 10px;
+    display: none;
+}
+
+.activeAns {
+    display: block;
+}
+
+.progressbar{
+    background-color: rgb(68, 68, 70);
+    width: 100%;
+    height: 4px;
+}
+
+.mainprogress{
+    background-color: rgb(91, 91, 238);
+    height: 3px;
+}
