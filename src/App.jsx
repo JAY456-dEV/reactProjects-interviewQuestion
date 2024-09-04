@@ -33,6 +33,7 @@ import LikeButton from '../components/LikeButton/likeButton'
 import TrafficLight from '../components/trafficLight/TrafficLight'
 import DigitalClock from '../components/DigitalClock/digitalClock'
 import DataTable from '../components/dataTable/dataTable'
+import ColorMatchBox from '../components/colormatchingBox/colorMatchBox'
 
 function App() {
 
@@ -105,7 +106,8 @@ function App() {
       {/* <LikeButton /> */}
       {/* <TrafficLight /> */}
       {/* <DigitalClock /> */}
-      {/* <DataTable /> */}
+      <DataTable />
+      {/* <ColorMatchBox boxSize={12} /> */}
     </>
   )
 }
