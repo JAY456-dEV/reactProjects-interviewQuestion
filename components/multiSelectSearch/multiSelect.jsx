@@ -19,6 +19,7 @@ const MultiSelect = () => {
         if (query !== '') {
             const response = await fetch(`https://dummyjson.com/users/search?q=${query}`)
             const data = await response.json()
+            console.log(data)
             setAllData(data.users)
         }
     }
@@ -31,7 +32,6 @@ const MultiSelect = () => {
         fetchData()
     }, [query])
 
-
     function handleSingleSelect(userDetail) {
         let seeUserExist = storeFilterSelected.find((user) => user.id == userDetail.id)
 
@@ -41,10 +41,6 @@ const MultiSelect = () => {
             inputRef.current.focus()
         }
     }
-
-    console.log(selectedUser)
-
-    console.log(selectedUser)
 
     function handleSelectedDelete(id) {
         setStoreFilterSelected((prev) => prev.filter((item) => item.id !== id))

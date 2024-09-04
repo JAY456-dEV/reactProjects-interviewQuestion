@@ -30,7 +30,7 @@ function ProgressBar() {
 
     return (
         <>
-            <div className='progress'>
+            <div className='progresss'>
                 <div className='prog-main'>
                     <div className='progressBar'>
                         <div className='progressed-bar-end' style={{ width: `${progresswidth}%` }}></div>
@@ -53,7 +53,7 @@ function ProgressBar() {
                     <p>Payment</p>
                     <p>Deliverd</p>
                 </div>
-                <button onClick={() => handleNext()}>Next</button>
+                <button  onClick={() => handleNext()}>Next</button>
             </div >
         </>
     )

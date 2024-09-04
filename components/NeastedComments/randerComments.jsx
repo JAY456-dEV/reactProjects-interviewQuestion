@@ -29,7 +29,7 @@ function RanderComments({ title, nestedCommentCheck, checkLikedCommentAndDelete 
                     </div>
 
                     : <>
-                        <input type="text" placeholder='enter replay' onChange={(e) => setReplayComment(e.target.value)} />
+                        <input type="text" placeholder='enter replay' style={{ color: 'black' }} onChange={(e) => setReplayComment(e.target.value)} />
                         <button className='btnReplay' onClick={() => handleSendComment(title.id)}>Send</button>
                         <button className='btnReplay' onClick={() => setCheckReplayClick(false)}>Cancel</button>
                     </>

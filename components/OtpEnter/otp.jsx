@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './otp.css'
 
 function Opt() {
@@ -36,6 +36,12 @@ function Opt() {
             refInput[3].current.focus();
         }
     };
+
+    useEffect(() => {
+        if (refInput) {
+            refInput[0].current.focus()
+        }
+    }, [])
 
     return (
         <div className='input-main'>

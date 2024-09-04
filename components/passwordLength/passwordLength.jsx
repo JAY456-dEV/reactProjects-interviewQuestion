@@ -68,7 +68,7 @@ function PasswordLength() {
         <>
             <div className='main-password'>
                 <div>
-                    <input type="text" value={password} placeholder='enter password' onChange={handleInput} />
+                    <input type="text" value={password} placeholder='enter password' className='passLength' onChange={handleInput} />
                 </div>
                 <div className='progress-password'>
                     <div className='progressbar-password' style={{ ...progressStyle }}></div>

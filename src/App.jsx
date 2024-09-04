@@ -37,7 +37,7 @@ import ColorMatchBox from '../components/colormatchingBox/colorMatchBox'
 
 function App() {
 
-  //start data for stepForm
+  // start data for stepForm
   // const [pageForm, setPageForm] = useState(1)
   // const [formData, setFormData] = useState({})
 
@@ -67,7 +67,7 @@ function App() {
 
   return (
     <>
-      {/* <ProgressBar /> */}
+      <ProgressBar />
       {/* <Otp /> */}
       {/* <MultiSelect /> */}
       {/* <PasswordGen /> */}
@@ -106,7 +106,7 @@ function App() {
       {/* <LikeButton /> */}
       {/* <TrafficLight /> */}
       {/* <DigitalClock /> */}
-      <DataTable />
+      {/* <DataTable /> */}
       {/* <ColorMatchBox boxSize={12} /> */}
     </>
   )

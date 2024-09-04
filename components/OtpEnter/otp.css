@@ -1,13 +1,16 @@
-.input-main{
-    display: flex;
-    justify-content: center;
+.input-main {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
 }
 
-.inputOtp{
-    width: 40px;
-    height: 35px;
-    text-align: center;
-    font-size: 18px;
+.inputOtp {
+  width: 40px;
+  height: 35px;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  margin-left: 10px;
 }
 
 .inputOtp::-webkit-outer-spin-button,

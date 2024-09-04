@@ -1,6 +1,7 @@
 .app-main-multi {
-    max-width: 380px;
+    max-width: 340px;
     height: auto;
+    margin: auto;
 }
 
 .search-main {
@@ -20,6 +21,8 @@
     outline: none;
     border: none;
     width: 200px;
+    color: white;
+    background-color: transparent;
     /* position: relative; */
 }
 
@@ -28,7 +31,7 @@
     width: 200px;
     height: 250px;
     overflow-y: auto;
-    background-color: white;
+    background-color: rgb(5, 3, 3);
     /* padding: 10px; */
     /* position: absolute; */
 }
@@ -38,7 +41,7 @@
 }
 
 .filterData::-webkit-scrollbar-thumb {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 

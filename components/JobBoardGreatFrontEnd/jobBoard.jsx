@@ -29,8 +29,7 @@ function JobBoard() {
             async function fetchJobData() {
                 setLoading(true);
                 try {
-                    const itemsForPage = await Promise.all(
-                        jobIdStore.slice(6 * showPerMoreData - 6, 6 * showPerMoreData).map((itemId) =>
+                    const itemsForPage = await Promise.all(jobIdStore.slice(6 * showPerMoreData - 6, 6 * showPerMoreData).map((itemId) =>
                             fetch(`https://hacker-news.firebaseio.com/v0/item/${itemId}.json`).then((res) => res.json())
                         )
                     );
