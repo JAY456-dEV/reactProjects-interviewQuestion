@@ -1,0 +1,27 @@
+.album-main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 50px 10px;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.popupAlbum {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -05%);
+}
+
+.album {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.mainUrl {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    
+}

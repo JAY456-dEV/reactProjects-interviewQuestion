@@ -35,6 +35,7 @@ import DigitalClock from '../components/DigitalClock/digitalClock'
 import DataTable from '../components/dataTable/dataTable'
 import ColorMatchBox from '../components/colormatchingBox/colorMatchBox'
 import PollWidget from '../components/PollWidget/pollWidget'
+import ImgGallary from '../components/ImgGallary/imgGallary'
 
 function App() {
 
@@ -93,7 +94,7 @@ function App() {
 
       {/* data for breadcrumbs end */}
       {/* <Toast /> */}
-      <Accordin />
+      {/* <Accordin /> */}
       {/* <Avatar /> */}
       {/* <Progress /> */}
       {/* <ToastNew /> */}
@@ -110,6 +111,7 @@ function App() {
       {/* <DataTable /> */}
       {/* <ColorMatchBox boxSize={12} /> */}
       {/* <PollWidget /> */}
+      <ImgGallary />
     </>
   )
 }
