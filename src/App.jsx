@@ -34,6 +34,7 @@ import TrafficLight from '../components/trafficLight/TrafficLight'
 import DigitalClock from '../components/DigitalClock/digitalClock'
 import DataTable from '../components/dataTable/dataTable'
 import ColorMatchBox from '../components/colormatchingBox/colorMatchBox'
+import PollWidget from '../components/PollWidget/pollWidget'
 
 function App() {
 
@@ -67,7 +68,7 @@ function App() {
 
   return (
     <>
-      <ProgressBar />
+      {/* <ProgressBar /> */}
       {/* <Otp /> */}
       {/* <MultiSelect /> */}
       {/* <PasswordGen /> */}
@@ -92,7 +93,7 @@ function App() {
 
       {/* data for breadcrumbs end */}
       {/* <Toast /> */}
-      {/* <Accordin /> */}
+      <Accordin />
       {/* <Avatar /> */}
       {/* <Progress /> */}
       {/* <ToastNew /> */}
@@ -108,6 +109,7 @@ function App() {
       {/* <DigitalClock /> */}
       {/* <DataTable /> */}
       {/* <ColorMatchBox boxSize={12} /> */}
+      {/* <PollWidget /> */}
     </>
   )
 }
