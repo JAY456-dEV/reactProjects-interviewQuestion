@@ -16,7 +16,7 @@ function DataPagination({ usersLength, perPage, setPerPage, setCurrentPage, curr
 
     return (
         <div className='dataPage'>
-            <select onChange={(e) => handlePerPageChange(e)} >
+            <select className='text-black' onChange={(e) => handlePerPageChange(e)} >
                 <option value="5">Show 5</option>
                 <option value="10">Show 10</option>
                 <option value="20">Show 20</option>

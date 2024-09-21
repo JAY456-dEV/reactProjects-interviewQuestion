@@ -34,20 +34,18 @@ const componentsArray = [
     { id: 1, name: 'Otp', component: <Otp /> },
     { id: 2, name: 'MultiSelect', component: <MultiSelect /> },
     { id: 3, name: 'PasswordGen', component: <PasswordGen /> },
-    { id: 4, name: 'TrelloMain', component: <TrelloMain /> },
     { id: 5, name: 'Expense', component: <Expense /> },
     { id: 6, name: 'InfinteScroll', component: <InfiniteScroll /> },
     // { id: 7, name: 'Breadcrumbs', component: <Breadcrumbs /> },
     { id: 8, name: 'Home', component: <Home /> },
     { id: 9, name: 'ProductListing', component: <Productlisting /> },
-    { id: 10, name: 'ProductDetail', component: <ProductDetail /> },
     { id: 11, name: 'Toast', component: <Toast /> },
     { id: 12, name: 'Accordin', component: <Accordin /> },
     { id: 13, name: 'Avatar', component: <Avatar /> },
-    { id: 15, name: 'ToastNew', component: <ToastNew /> },
+    // { id: 15, name: 'ToastNew', component: <ToastNew /> },
     { id: 16, name: 'Practice', component: <Practice /> },
     { id: 17, name: 'PasswordLength', component: <PasswordLength /> },
-    { id: 18, name: 'FormValidation', component: <FormValidation /> },
+    { id: 18, name: 'FormValidation Using Formik', component: <FormValidation /> },
     { id: 19, name: 'SelectGrid', component: <SelectGrid /> },
     { id: 20, name: 'CryptoConverter', component: <CryptoConverter /> },
     { id: 21, name: 'NestedComment', component: <NestedComment /> },
@@ -57,7 +55,7 @@ const componentsArray = [
     { id: 25, name: 'DigitalClock', component: <DigitalClock /> },
     { id: 26, name: 'DataTable', component: <DataTable /> },
     { id: 27, name: 'ColorMatchBox', component: <ColorMatchBox boxSize={12} /> },
-    { id: 28, name: 'PollWidget', component: <PollWidget /> },
+    // { id: 28, name: 'PollWidget', component: <PollWidget /> },
     { id: 29, name: 'ImgGallary', component: <ImgGallary /> },
 ];
 
@@ -72,9 +70,9 @@ function ProjectShow() {
                     if (item.id == param.id) {
                         return (
                             <div>
-                                <div className='flex bg-white text-black w-fit py-2 px-6 m-5 '>
-                                    <p className='text-xl font-semibold'>{item.id}</p>
-                                    <p>{item.name}</p>
+                                <div className='flex bg-white text-black w-fit gap-2  py-2 px-6 m-5 '>
+                                    <p className='projectShowTitle common-nameStyle'>{item.id} :</p>
+                                    <p className='projectShowName common-nameStyle'>{item.name}</p>
                                 </div>
                                 <div className='flex justify-center h-screen'>
                                     {item.component}

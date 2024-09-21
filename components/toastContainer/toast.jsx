@@ -104,7 +104,7 @@ function Toast() {
 
     return (
         <div className="content">
-            <h1>Add Notification</h1>
+            <h1 className='text-black'>Add Notification</h1>
             <div className="actions">
                 <button className="info" onClick={handleClick} data-type="INFO">
                     Info

@@ -49,7 +49,7 @@ function FormValidation() {
                             <input className="input" id="confirmPassword" name='confirm_password' value={values.confirm_password} placeholder="Confirm your password" type="password" onChange={handleChange} onBlur={handleBlur} />
                             {errors.confirm_password && touched.confirm_password && <p className='error-formik'>{errors.confirm_password}</p>}
                         </div>
-                        <button className='signup' type='submit'>Sign Up</button>
+                        <button className='signup text-white' type='submit'>Sign Up</button>
                     </form>
                 </div>
             </div>

@@ -30,8 +30,8 @@ function JobBoard() {
                 setLoading(true);
                 try {
                     const itemsForPage = await Promise.all(jobIdStore.slice(6 * showPerMoreData - 6, 6 * showPerMoreData).map((itemId) =>
-                            fetch(`https://hacker-news.firebaseio.com/v0/item/${itemId}.json`).then((res) => res.json())
-                        )
+                        fetch(`https://hacker-news.firebaseio.com/v0/item/${itemId}.json`).then((res) => res.json())
+                    )
                     );
                     setOrignalData(prevData => [...prevData, ...itemsForPage]);
                 } catch (error) {
@@ -52,9 +52,9 @@ function JobBoard() {
                     {orignalData.map((job) => (
                         <div key={job.id} className='jobBox'>
                             <a href={`https://jobs.lever.co/juniperplatform/${job.id}`}>{job.title}</a>
-                            <div className='jobBy'>
+                            <div className='jobBy text-black'>
                                 <p>By {job.by}</p>
-                                <p>{new Date(1000 * job.time).toLocaleString()}</p>
+                                <p className=''>{new Date(1000 * job.time).toLocaleString()}</p>
                             </div>
                         </div>
                     ))}

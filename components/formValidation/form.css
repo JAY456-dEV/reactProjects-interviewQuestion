@@ -119,9 +119,10 @@
 .signup {
     background-color: black;
     text-align: center;
+    color: white;
 }
 
 .error-formik {
     color: red;
-    
+
 }

@@ -55,12 +55,12 @@ function Accordin() {
 
 
     return (
-        <div className='accordin-main'>
+        <div className='accordin-main '>
             <div className='accordin-flex'>
                 {
                     data.map((item, idx) => {
                         return (
-                            <div className='ques-main-start' key={idx}>
+                            <div className='ques-main-start ' key={idx}>
                                 <div className='progressbar'>
                                     <div className={`${ansOpenIdx === idx ? 'mainprogress' : null}`} style={{ width: `${progressCounter}%` }}></div>
                                 </div>

@@ -19,7 +19,7 @@ function CryptoConverter() {
         const diff = show.toFixed(2) - prevValue
         diff < 0 ? setIsUp(false) : setIsUp(true)
         setDiff(diff)
-        
+
         window.sessionStorage.setItem('prevVal', show.toFixed(2))
     }
 
@@ -43,8 +43,8 @@ function CryptoConverter() {
                 <h1>Crypto Currency Converter</h1>
                 <div className='curreny'>
                     <div className='select-setValue'>
-                        <input type="number" value={userValue} onChange={(e) => setUserValue(e.target.value)} />
-                        <select onChange={handleCurrency}>
+                        <input type="number" value={userValue} onChange={(e) => setUserValue(e.target.value)} className='text-black' />
+                        <select onChange={handleCurrency} className='text-black'>
                             {['usd', 'eur', 'gbp', 'cny', 'jpy'].map((curr, idx) => {
                                 return (
                                     <option key={idx} value={curr}>{curr}</option>
