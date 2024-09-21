@@ -11,7 +11,7 @@ function Progress() {
 
     function handleClick() {
         setCounter(prev => prev + 1)
-    }
+    }   
 
     useEffect(() => {
         let timerId

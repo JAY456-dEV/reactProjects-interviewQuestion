@@ -29,16 +29,20 @@ function ColorMatchBox({ boxSize }) {
         }
     }
 
+    const [btnOf, setBtnOf] = useState(false)
     useEffect(() => {
         let intervalID
         if (justshow.length == 2) {
+            setBtnOf(true)
             if (boxes[clickedBox[0]] == boxes[clickedBox[1]]) {
                 clearInterval(intervalID)
                 setJustShow([])
+                setBtnOf(false)
             } else {
                 setTimeout(() => {
                     setClickedBox(prev => prev.splice(2))
                     setJustShow([])
+                    setBtnOf(false)
                 }, 400)
             }
         }
@@ -57,7 +61,7 @@ function ColorMatchBox({ boxSize }) {
                 {
                     !winnig ? boxes.map((item, idx) => {
                         return (
-                            <button className='boxes-Color' onClick={() => handleClickedBox(item, idx)} key={idx} style={{
+                            <button className='boxes-Color' disabled={btnOf} onClick={() => handleClickedBox(item, idx)} key={idx} style={{
                                 backgroundColor: `${clickedBox.find(itemIdx => itemIdx == idx) ? `${item}` : ''}`, border: '1px solid white'
                             }}></button>
                         )

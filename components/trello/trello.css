@@ -25,3 +25,11 @@
     margin-bottom: 15px;
     padding-inline: 10px;
 }
+
+.inputrello input {
+    color: black;
+}
+
+.inputrello select option {
+    color: black;
+}

@@ -54,7 +54,7 @@ function ProgressBar() {
                     <p>Deliverd</p>
                 </div>
                 <button  onClick={() => handleNext()}>Next</button>
-            </div >
+            </div>
         </>
     )
 }

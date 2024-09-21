@@ -29,7 +29,7 @@ function Trellocate({ handleChange, editData }) {
 
     return (
         <>
-            <div className='input'>
+            <div className='input inputrello'>
                 <input type="text" placeholder='task' ref={inputRef} />
                 <select ref={cateRef}>
                     {

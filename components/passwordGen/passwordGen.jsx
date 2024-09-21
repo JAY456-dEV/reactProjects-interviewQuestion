@@ -127,7 +127,7 @@ function PasswordGen() {
     const { password, generatePassword, error } = UsePassword()
     const [copied, setCopied] = useState(false)
 
-
+    
     function handleChange(idx) {
         const copyInput = [...inputData]
         copyInput[idx].status = !copyInput[idx].status
