@@ -69,8 +69,8 @@ function ProjectShow() {
                 componentsArray.map((item) => {
                     if (item.id == param.id) {
                         return (
-                            <div>
-                                <div className='flex bg-white text-black w-fit gap-2  py-2 px-6 m-5 '>
+                            <div className='mb-10'>
+                                <div className='flex bg-white text-black w-fit gap-2  py-2 px-6 m-5'>
                                     <p className='projectShowTitle common-nameStyle'>{item.id} :</p>
                                     <p className='projectShowName common-nameStyle'>{item.name}</p>
                                 </div>
