@@ -33,9 +33,11 @@ function Pagination() {
 
     return (
         <>
-            <div>Pagination</div>
-            <DataShow props={currentData} />
-            <Paginate setCurrentPage={setCurrentPage} perPage={perPage} totalDataLength={data && data.length} />
+            <div className='flex-pagination'>
+                <div>Pagination</div>
+                <DataShow props={currentData} />
+                <Paginate setCurrentPage={setCurrentPage} perPage={perPage} totalDataLength={data && data.length} />
+            </div>
         </>
     )
 }

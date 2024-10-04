@@ -27,9 +27,6 @@ const router = createBrowserRouter([
     path: '/products',
     element: <Productlisting />
   },
-
-
-
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

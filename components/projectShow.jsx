@@ -29,6 +29,8 @@ import PollWidget from './PollWidget/pollWidget';
 import ImgGallary from './ImgGallary/imgGallary';
 import Otp from '../components/OtpEnter/otp'
 import { useParams } from 'react-router-dom';
+import ProgressBar from './progressBar/progressbar';
+import Pagination from './pagination/pagination';
 
 const componentsArray = [
     { id: 1, name: 'Otp', component: <Otp /> },
@@ -57,6 +59,8 @@ const componentsArray = [
     { id: 27, name: 'ColorMatchBox', component: <ColorMatchBox boxSize={12} /> },
     // { id: 28, name: 'PollWidget', component: <PollWidget /> },
     { id: 29, name: 'ImgGallary', component: <ImgGallary /> },
+    { id: 30, name: 'progressbar', component: <ProgressBar /> },
+    { id: 31, name: 'pagination', component: <Pagination /> },
 ];
 
 function ProjectShow() {

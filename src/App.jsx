@@ -64,6 +64,8 @@ const componentsArray = [
   { id: 27, name: 'ColorMatchBox', component: <ColorMatchBox boxSize={12} /> },
   // { id: 28, name: 'PollWidget', component: <PollWidget /> },
   { id: 29, name: 'ImgGallary', component: <ImgGallary /> },
+  { id: 30, name: 'progressbar', component: <ProgressBar /> },
+  { id: 31, name: 'pagination', component: <Pagination /> },
 ];
 
 // Render the components or access them based on the array

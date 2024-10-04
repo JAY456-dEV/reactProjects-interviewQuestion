@@ -4,13 +4,13 @@ function DataShow({ props }) {
     return (
         <>
             {
-                props && props.length && props.map((data) => {
+                props && props.length ? props.map((data) => {
                     return (
                         <div className='data-paginate' key={data.id}>
                             <p>{data.title}</p>
                         </div>
                     )
-                })
+                }) : 'Loading Data...'
             }
         </>
     )

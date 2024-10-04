@@ -6,3 +6,8 @@
     font-weight: 700;
     font-size: 22px;
 }
+
+.flex-pagination {
+    display: flex;
+    flex-direction: column;
+}

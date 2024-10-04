@@ -66,19 +66,21 @@ function NestedComment() {
     return (
         <>
             <div>
-                <input type="text" placeholder='Enter Comment' className='inputComment' onChange={(e) => setInputText(e.target.value)} />
-                <button style={{ backgroundColor: 'black' }} onClick={() => addComment(inputtext)}>Search</button>
-            </div>
+                <div>
+                    <input type="text" placeholder='Enter Comment' className='inputComment' onChange={(e) => setInputText(e.target.value)} />
+                    <button style={{ backgroundColor: 'black' }} onClick={() => addComment(inputtext)}>Search</button>
+                </div>
 
-            <ul className='comment'>
-                {
-                    commentData.map((title) => {
-                        return (
-                            <RanderComments title={title} key={title.id} nestedCommentCheck={nestedCommentCheck} checkLikedCommentAndDelete={checkLikedCommentAndDelete} />
-                        )
-                    })
-                }
-            </ul>
+                <ul className='comment'>
+                    {
+                        commentData.map((title) => {
+                            return (
+                                <RanderComments title={title} key={title.id} nestedCommentCheck={nestedCommentCheck} checkLikedCommentAndDelete={checkLikedCommentAndDelete} />
+                            )
+                        })
+                    }
+                </ul>
+            </div>
         </>
     )
 }
