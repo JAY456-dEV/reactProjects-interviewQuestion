@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { SlDiamond } from "react-icons/sl";
 import { GiUnlitBomb } from "react-icons/gi";
+import '../mineGame/mineGame.css'
 
 function MineGame() {
 
@@ -89,15 +90,15 @@ function MineGame() {
 
     return (
         <>
-            <div className='flex flex-col max-w-[600px] mx-auto h-[120vh]'>
+            <div className='flex flex-col max-w-[600px] mx-auto h-[110vh]'>
                 {
                     youGussedAllRight && (
                         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50">
                             <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-                                <h2 className="text-2xl font-bold mb-4">Play Again?</h2>
+                                <h2 className="text-2xl font-bold mb-4 text-black">Play Again?</h2>
                                 <button
                                     onClick={() => handlePlayAgain()}
-                                    className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                                    className="px-6 py-3 bg-blue-600 text-white black rounded-lg hover:bg-blue-700"
                                 >
                                     Play Again
                                 </button>
@@ -106,7 +107,7 @@ function MineGame() {
                     )
                 }
                 <div className='w-72 mt-5 flex items-center justify-center gap-7'>
-                    <select name="" id="" onChange={(e) => handleDifficulty(e)}>
+                    <select name="" id="" className='text-black' onChange={(e) => handleDifficulty(e)}>
                         <option value="easy" data-difficulty='21'>Easy</option>
                         <option value="medium" data-difficulty='18'>Medium</option>
                         <option value="hard" data-difficulty='16'>Hard</option>
@@ -123,13 +124,13 @@ function MineGame() {
                                     <button
                                         key={mine.id}
                                         disabled={selectedMine.findIndex((item) => item.id == mine.id) !== -1 ? true : false}
-                                        className={`${selectedMine.find((item) => item.id == mine.id) ? 'pointer-events-none' : ''}relative w-28 h-28 cursor-pointer flex justify-center items-center flip-container ${isDiamond ? selectedMine.find((item) => item.id === mine.id) ? 'flipped' : '' : 'flipped'}`}
+                                        className={`${selectedMine.find((item) => item.id == mine.id) ? 'pointer-events-none' : ''} relative w-28 h-28 cursor-pointer flex justify-center items-center flip-container ${isDiamond ? selectedMine.find((item) => item.id === mine.id) ? 'flipped' : '' : 'flipped'}`}
                                         onClick={() => handleSelectedMine(mine, idx)}
                                     >
-                                        <div className="flipper">
-                                            <div className='front absolute bg-green-500 w-full h-full flex justify-center items-center'>
+                                        <div className="flipper absolute rounded-lg  bg-green-500 ">
+                                            <div className='front absolute w-full h-full flex justify-center items-center'>
                                             </div>
-                                            <div className={`back absolute bg-gray-900 w-full h-full flex justify-center items-center`} style={{
+                                            <div className={`back absolute rounded-lg bg-gray-900 w-full h-full flex justify-center items-center`} style={{
                                                 opacity: `${selectedMine.find((item) => item.id === mine.id) ? '1' : '0.5'}`
                                             }}>
                                                 <mine.icon size={56} color={mine.isBomb ? 'red' : 'green'} />
