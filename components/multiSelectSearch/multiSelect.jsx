@@ -1,99 +1,86 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './multiplesearch.css'
 import SelectedData from './selectedData'
 
 const MultiSelect = () => {
-
-    const [query, setQuery] = useState("")
     const [allData, setAllData] = useState([])
-    const [storeFilterSelected, setStoreFilterSelected] = useState([])
-    const [selectedUser, setSelectedUser] = useState([])
-    const [inputTopLeft, setInputTopLeft] = useState({
-        top: 0,
-        left: 0
-    })
-
-    const inputRef = useRef()
+    const [query, setQuery] = useState('')
 
     async function fetchData() {
         if (query !== '') {
             const response = await fetch(`https://dummyjson.com/users/search?q=${query}`)
             const data = await response.json()
-            console.log(data)
             setAllData(data.users)
         }
     }
 
-    function handleChange(e) {
-        setQuery(e.target.value)
-    }
-
     useEffect(() => {
-        fetchData()
+        let intervalId;
+        clearInterval(intervalId)
+        intervalId = setTimeout(() => {
+            fetchData()
+        }, 500)
+
+        return (() => clearInterval(intervalId))
     }, [query])
+    console.log(allData)
 
-    function handleSingleSelect(userDetail) {
-        let seeUserExist = storeFilterSelected.find((user) => user.id == userDetail.id)
+    const [selectedUser, setSelectedUser] = useState([])
 
-        if (seeUserExist == undefined) {
-            setStoreFilterSelected([...storeFilterSelected, userDetail])
-            setSelectedUser([...selectedUser, userDetail.id])
-            inputRef.current.focus()
+    function handleSelectedUser(user) {
+        if (selectedUser.findIndex((item) => item.id == user.id) == -1) {
+            setSelectedUser(prev => [...prev, user])
         }
     }
 
-    function handleSelectedDelete(id) {
-        setStoreFilterSelected((prev) => prev.filter((item) => item.id !== id))
+    function handleDelete(id) {
+        let copySelectedUser = [...selectedUser]
+        copySelectedUser = copySelectedUser.filter((item) => item.id !== id)
+        setSelectedUser(copySelectedUser)
     }
 
-    function handleBackspaceDelete(e) {
-        if (e.keyCode === 8) {
-            if (storeFilterSelected.length) {
-                if (query === '') {
-                    const copyArr = [...storeFilterSelected]
-                    copyArr.splice(storeFilterSelected.length - 1, 1)
-                    setStoreFilterSelected(copyArr)
+    function handleKeyUp(e) {
+        console.log(e)
+        if (e.keyCode == 8) {
+            if (selectedUser.length) {
+                if (query == '') {
+                    let copySelectedUser = [...selectedUser]
+                    copySelectedUser.splice(selectedUser.length - 1, 1)
+                    setSelectedUser(copySelectedUser)
                 }
             }
         }
     }
 
-
     return (
         <>
-            <div className='app-main-multi' ref={inputRef}>
+            <div className='app-main-multi'>
                 <div className='search-main'>
                     <div className='selectedData-main'>
                         {
-                            storeFilterSelected && storeFilterSelected.length ? storeFilterSelected.map((user) => {
-                                return <SelectedData key={user.id} user={user} handleSelectedDelete={handleSelectedDelete} />
-                            }) : null
+                            selectedUser && selectedUser.map((user) => {
+                                return <SelectedData key={user.id} user={user} handleDelete={handleDelete} />
+                            })
                         }
                     </div>
-                    <input type="text" placeholder='Search' className='search-input' value={query} onChange={((e) => handleChange(e))} onKeyDown={(e) => handleBackspaceDelete(e)} />
+                    <input type="text" placeholder='Search' className='search-input' value={query} onChange={(e) => setQuery(e.target.value)} onKeyDown={(e) => handleKeyUp(e)} />
                 </div>
-
-                {/* {
-                    <div className='selectedData-main'>
-                        {
-                            storeFilterSelected && storeFilterSelected.length ? storeFilterSelected.map((item) => {
-                                return <SelectedData item={item} handleSelectedDelete={handleSelectedDelete} />
-                            }) : null
-                        }
-                    </div>
-                } */}
 
                 <div className='main-pos-SelectMenu'>
                     {
                         allData && allData.length ? (
                             <div className='filterData'>
                                 {
-                                    allData.map((user) => {
+                                    allData && allData.map((user) => {
+                                        if (selectedUser.findIndex((item) => item.id == user.id) !== -1) {
+                                            return
+                                        }
+
                                         return (
-                                            selectedUser.indexOf(user.id) == -1 ? <div key={user.id} className='singleData' onClick={() => handleSingleSelect(user)}>
+                                            <div key={user.id} className='singleData' onClick={() => handleSelectedUser(user)}>
                                                 <img src={user.image} alt="" width={'20px'} />
                                                 <p>{user.firstName}</p>
-                                            </div> : null
+                                            </div>
                                         )
                                     })
                                 }

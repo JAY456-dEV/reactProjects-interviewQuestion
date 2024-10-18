@@ -38,7 +38,7 @@ function InfiniteScroll() {
 
     return (
         <>
-            <div>
+            <div className='infiniteScroll'>
                 {data.map((item) => (
                     <ScrollData item={item} key={item.id} />
                 ))}

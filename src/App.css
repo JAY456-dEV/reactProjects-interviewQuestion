@@ -11,3 +11,52 @@
     display: flex;
     flex-direction: column;
 }
+
+.emi-main {
+    max-width: 500px;
+}
+
+.emi-heading h1 {
+    font-size: 40px;
+    margin-block: 12px;
+}
+
+.input-emi input {
+    width: 100%;
+    margin-block: 10px;
+}
+
+.emiCalculate input {
+    width: 100%;
+    margin-block: 10px;
+    color: black;
+    padding-left: 4px;
+    padding-block: 3px;
+    outline: none;
+}
+
+.rate-common {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.tenure-main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.tenure-per {
+    width: fit-content;
+    height: fit-content;
+    background-color: gray;
+    padding: 10px;
+    padding-inline: 16px;
+    border-radius: 10px;
+}
+
+.totalDownPayment {
+    font-weight: 700;
+    text-decoration: underline;
+}

@@ -22,7 +22,7 @@ function ColorMatchBox({ boxSize }) {
 
     const [winnig, setWinnig] = useState(false)
 
-    function handleClickedBox(color, idx) {
+    function handleClickedBox(color, idx) { 
         if (justshow.length < 2) {
             setClickedBox(prev => [idx, ...prev])
             setJustShow(prev => [...prev, idx])
@@ -30,6 +30,7 @@ function ColorMatchBox({ boxSize }) {
     }
 
     const [btnOf, setBtnOf] = useState(false)
+    
     useEffect(() => {
         let intervalID
         if (justshow.length == 2) {

@@ -31,6 +31,7 @@ import Otp from '../components/OtpEnter/otp'
 import { useParams } from 'react-router-dom';
 import ProgressBar from './progressBar/progressbar';
 import Pagination from './pagination/pagination';
+import EmiCalculator from './EmiCalculator/emiCalculator';
 
 const componentsArray = [
     { id: 1, name: 'Otp', component: <Otp /> },
@@ -61,6 +62,7 @@ const componentsArray = [
     { id: 29, name: 'ImgGallary', component: <ImgGallary /> },
     { id: 30, name: 'progressbar', component: <ProgressBar /> },
     { id: 31, name: 'pagination', component: <Pagination /> },
+    { id: 32, name: 'Emi Calculator', component: <EmiCalculator /> },
 ];
 
 function ProjectShow() {

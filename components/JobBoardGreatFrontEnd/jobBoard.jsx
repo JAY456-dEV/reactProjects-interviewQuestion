@@ -31,8 +31,7 @@ function JobBoard() {
                 try {
                     const itemsForPage = await Promise.all(jobIdStore.slice(6 * showPerMoreData - 6, 6 * showPerMoreData).map((itemId) =>
                         fetch(`https://hacker-news.firebaseio.com/v0/item/${itemId}.json`).then((res) => res.json())
-                    )
-                    );
+                    ));
                     setOrignalData(prevData => [...prevData, ...itemsForPage]);
                 } catch (error) {
                     console.error('Error fetching job data:', error);
