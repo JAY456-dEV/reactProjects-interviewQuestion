@@ -37,6 +37,7 @@ import ColorMatchBox from '../components/colormatchingBox/colorMatchBox'
 import PollWidget from '../components/PollWidget/pollWidget'
 import ImgGallary from '../components/ImgGallary/imgGallary'
 import EmiCalculator from '../components/EmiCalculator/emiCalculator'
+import MineGame from './_components/mineGame/mineGame'
 
 const componentsArray = [
   { id: 1, name: 'Otp', component: <Otp /> },
@@ -68,6 +69,7 @@ const componentsArray = [
   { id: 30, name: 'progressbar', component: <ProgressBar /> },
   { id: 31, name: 'pagination', component: <Pagination /> },
   { id: 32, name: 'Emi Calculator', component: <EmiCalculator /> },
+  { id: 33, name: 'MineGame', component: <MineGame /> },
 ];
 
 // Render the components or access them based on the array
