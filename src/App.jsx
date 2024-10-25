@@ -12,7 +12,7 @@ import SecForm from '../components/multiStepForm/secForm'
 import ThirdForm from '../components/multiStepForm/thirdForm'
 import Pagination from '../components/pagination/pagination'
 import InfinteScroll from '../components/infinteScroll/infinteScroll'
-import { BrowserRouter, Form, Link, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Form, Link, Outlet, Route, Routes, useNavigate, useParams } from 'react-router-dom'
 import Productlisting from '../components/breadcrumbs/productlisting'
 import ProductDetail from '../components/breadcrumbs/productDetail'
 import Home from '../components/breadcrumbs/Home'
@@ -66,7 +66,7 @@ const componentsArray = [
   { id: 25, name: 'DigitalClock', component: <DigitalClock /> },
   { id: 26, name: 'DataTable', component: <DataTable /> },
   { id: 27, name: 'ColorMatchBox', component: <ColorMatchBox boxSize={12} /> },
-  // { id: 28, name: 'PollWidget', component: <PollWidget /> },
+  // { id: 28, name: 'PollWidget', component: <PollWidget /> }
   { id: 29, name: 'ImgGallary', component: <ImgGallary /> },
   { id: 30, name: 'progressbar', component: <ProgressBar /> },
   { id: 31, name: 'pagination', component: <Pagination /> },
@@ -77,16 +77,51 @@ const componentsArray = [
 ];
 
 // Render the components or access them based on the array
+
 function App() {
+  const navigate = useNavigate()
+  const param = useParams()
+
+  function handleValue(e) {
+    navigate(e.target.value)
+  }
+
   return (
-    <div className='flex flex-wrap gap-2 justify-center mt-10'>
-      {componentsArray.map((comp) => (
-        <Link to={`/project/${comp.id}`} key={comp.id} className='bg-white py-2 px-6 text-black'>
-          <h2>{comp.name}</h2>
-          {/* {comp.component} */}
-        </Link>
-      ))}
-    </div>
+    <div className='flex flex-col flex-wrap gap-2 justify-center max-w-[1450px] mx-auto'>
+      <div className='flex items-center justify-between mt-6'>
+        {!param.id && <p className='projectShowName common-nameStyle'>Project</p>}
+        {
+          componentsArray.map((item) => {
+            if (item.id == param.id) {
+              return <div className='flex text-white w-fit gap-2  py-2 px-6 m-5'>
+                <p className='projectShowTitle common-nameStyle'>{item.id} :</p>
+                <p className='projectShowName common-nameStyle'>{item.name}</p>
+              </div>
+            } else {
+
+            }
+          })
+        }
+        <select
+          name=""
+          id=""
+          className="w-56 px-4 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-black"
+          onClick={handleValue}
+        >
+          {componentsArray.map((comp) => (
+            <option
+              value={`/project/${comp.id}`}
+              key={comp.id}
+              className="text-black bg-white hover:bg-gray-100 focus:bg-blue-100"
+            >
+              {comp.name}
+            </option>
+          ))}
+        </select>
+
+      </div>
+      <Outlet />
+    </div >
   );
 }
 
