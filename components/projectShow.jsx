@@ -33,6 +33,8 @@ import ProgressBar from './progressBar/progressbar';
 import Pagination from './pagination/pagination';
 import EmiCalculator from './EmiCalculator/emiCalculator';
 import MineGame from '../src/_components/mineGame/mineGame';
+import FilterLogic from '../src/_components/filterLogic/filterLogic';
+import DiwaliGift from '../src/_components/diwaligiftGen/diwaliGift';
 
 const componentsArray = [
     { id: 1, name: 'Otp', component: <Otp /> },
@@ -65,6 +67,8 @@ const componentsArray = [
     { id: 31, name: 'pagination', component: <Pagination /> },
     { id: 32, name: 'Emi Calculator', component: <EmiCalculator /> },
     { id: 33, name: 'MineGame', component: <MineGame /> },
+    { id: 34, name: 'FilterLogic', component: <FilterLogic /> },
+    { id: 35, name: 'diwaliGift', component: <DiwaliGift /> },
 ];
 
 function ProjectShow() {

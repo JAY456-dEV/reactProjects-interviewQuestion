@@ -38,6 +38,8 @@ import PollWidget from '../components/PollWidget/pollWidget'
 import ImgGallary from '../components/ImgGallary/imgGallary'
 import EmiCalculator from '../components/EmiCalculator/emiCalculator'
 import MineGame from './_components/mineGame/mineGame'
+import FilterLogic from './_components/filterLogic/filterLogic'
+import DiwaliGift from './_components/diwaligiftGen/diwaliGift'
 
 const componentsArray = [
   { id: 1, name: 'Otp', component: <Otp /> },
@@ -70,6 +72,8 @@ const componentsArray = [
   { id: 31, name: 'pagination', component: <Pagination /> },
   { id: 32, name: 'Emi Calculator', component: <EmiCalculator /> },
   { id: 33, name: 'MineGame', component: <MineGame /> },
+  { id: 34, name: 'FilterLogic', component: <FilterLogic /> },
+  { id: 35, name: 'diwaliGift', component: <DiwaliGift /> },
 ];
 
 // Render the components or access them based on the array
