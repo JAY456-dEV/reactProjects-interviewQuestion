@@ -59,7 +59,7 @@ function DiwaliGift() {
 
     return (
         <div>
-            <h1>Diwali Gift Exchange</h1>
+            <h1>Diwali Gift Genrator</h1>
             <div className='text-black flex items-center justify-center mt-10 gap-2'>
                 <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} placeholder='Enter Participant Name' className='pl-1 outline-none py-[5px] w-56' />
                 <div className='bg-gray-200 py-[5px] px-5 cursor-pointer' onClick={handleAddparticipant}>Add Person</div>
