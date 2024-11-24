@@ -40,6 +40,7 @@ import EmiCalculator from '../components/EmiCalculator/emiCalculator'
 import MineGame from './_components/mineGame/mineGame'
 import FilterLogic from './_components/filterLogic/filterLogic'
 import DiwaliGift from './_components/diwaligiftGen/diwaliGift'
+import SnakeLadder from './_components/snakeLadder/snakeLadder'
 
 const componentsArray = [
   { id: 1, name: 'Otp', component: <Otp /> },
@@ -74,6 +75,7 @@ const componentsArray = [
   { id: 33, name: 'MineGame', component: <MineGame /> },
   { id: 34, name: 'FilterLogic', component: <FilterLogic /> },
   { id: 35, name: 'diwaliGift', component: <DiwaliGift /> },
+  { id: 36, name: 'snakeLadder', component: <SnakeLadder /> },
 ];
 
 // Render the components or access them based on the array
@@ -97,8 +99,6 @@ function App() {
                 <p className='projectShowTitle common-nameStyle'>{item.id} :</p>
                 <p className='projectShowName common-nameStyle'>{item.name}</p>
               </div>
-            } else {
-
             }
           })
         }

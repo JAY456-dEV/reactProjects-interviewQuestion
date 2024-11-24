@@ -35,6 +35,7 @@ import EmiCalculator from './EmiCalculator/emiCalculator';
 import MineGame from '../src/_components/mineGame/mineGame';
 import FilterLogic from '../src/_components/filterLogic/filterLogic';
 import DiwaliGift from '../src/_components/diwaligiftGen/diwaliGift';
+import SnakeLadder from '../src/_components/snakeLadder/snakeLadder';
 
 const componentsArray = [
     { id: 1, name: 'Otp', component: <Otp /> },
@@ -69,6 +70,7 @@ const componentsArray = [
     { id: 33, name: 'MineGame', component: <MineGame /> },
     { id: 34, name: 'FilterLogic', component: <FilterLogic /> },
     { id: 35, name: 'diwaliGift', component: <DiwaliGift /> },
+    { id: 36, name: 'diwaliGift', component: <SnakeLadder /> },
 ];
 
 function ProjectShow() {

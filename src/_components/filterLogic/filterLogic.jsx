@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { FcStart } from 'react-icons/fc'
-import { MdStarRate, MdStart } from 'react-icons/md'
+import { MdStarRate } from 'react-icons/md'
 
 function FilterLogic() {
-
     const [mainData, setMainData] = useState([])
     const [categoryProduct, setCategoryProduct] = useState([])
     const [findMaximumPrice, setFindMaximumPrice] = useState(0)
